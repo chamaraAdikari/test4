@@ -1,4 +1,4 @@
-import "./searchitem.css"; // Correct CSS import
+import "./searchItem.css"; // Correct CSS import
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCurrency } from "../../context/CurrencyContext";
