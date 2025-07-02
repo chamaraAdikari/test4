@@ -1,0 +1,138 @@
+.searchbox-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.searchbox-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.searchbox-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.searchbox-input {
+  padding: 0.7rem 1rem;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  background: #eaf1fb;
+  color: #222;
+}
+
+.searchbox-input:focus {
+  background: #fff;
+  border: 1.5px solid #0071c2;
+}
+
+.searchbox-price-range {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.searchbox-price-range-box {
+  background: #2456e6;
+  border-radius: 12px;
+  padding: 1.2rem 1rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.searchbox-price-range-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: #2456e6;
+  border-radius: 12px;
+  padding: 1.2rem 1rem 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.searchbox-price-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.searchbox-price-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.searchbox-price-label {
+  color: #fff;
+  font-size: 0.93rem;
+  font-weight: 500;
+  min-width: 120px;
+  text-align: left;
+  letter-spacing: -0.5px;
+  word-spacing: 0.5px;
+}
+
+.searchbox-price-input {
+  min-width: 110px;
+  max-width: 130px;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  background: #eaf1fb;
+  color: #222;
+  border: none;
+  border-radius: 7px;
+  text-align: left;
+}
+
+.searchbox-btn {
+  margin-top: 1.2rem;
+  padding: 0.8rem 0;
+  border-radius: 7px;
+  background: #fff;
+  color: #0a47c5;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.searchbox-btn:hover {
+  background: #0071c2;
+  color: #fff;
+}
+
+.searchbox-btn-gradient {
+  background: linear-gradient(90deg, #00dbde 0%, #0071c2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+.searchbox-btn-gradient:hover {
+  background: linear-gradient(90deg, #0071c2 0%, #00dbde 100%);
+  color: #fff;
+}
