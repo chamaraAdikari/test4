@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import SearchItem from "../../components/searchitem/Searchitem";
+import SearchItem from "../../components/searchItem/SearchItem";
 
 const CityProperties = () => {
   const { city } = useParams();
