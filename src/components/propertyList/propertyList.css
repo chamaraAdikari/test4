@@ -1,0 +1,269 @@
+/* === PropertyList styles (mapped from .featured styles) === */
+
+.pList {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.pList .pListItem {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 220px;
+    max-width: 300px;
+    min-width: 300px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0;
+}
+
+.pList .pListImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    transition: transform 0.3s;
+}
+
+.pList .pListItem:hover .pListImg {
+    transform: scale(1.04);
+}
+
+.pList .pListTitles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 20px 16px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.05) 100%);
+    color: #fff;
+    z-index: 2;
+    border-radius: 0 0 16px 16px;
+    text-align: left;
+}
+
+.pList .pListTitles h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.pList .pListTitles h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.95;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.pListItemClickable {
+  cursor: pointer;
+  border: 2px solid #0d70ea;
+  box-shadow: 0 2px 8px rgba(13,112,234,0.08);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.pListItemClickable:hover {
+  box-shadow: 0 4px 16px rgba(13,112,234,0.18);
+  border-color: #0d41ea;
+}
+
+@media (max-width: 768px) {
+    .pList {
+        flex-direction: column;
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .pList .pListItem {
+        max-height: 160px !important;
+        min-height: 160px !important;
+        max-width: 600px;
+        min-width: 360px;
+        border-radius: 12px;
+    }
+
+    .pList .pListTitles {
+        padding: 12px 12px 10px 12px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .pListShowMoreBtn {
+        display: block;
+        width: 60%;
+        margin: 18px auto 0 auto;
+        padding: 10px 0;
+        background: linear-gradient(90deg, #0dccea 0%, #0d70ea 100%);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: background 0.2s;
+    }
+
+    .pListShowMoreBtn:hover {
+        background: linear-gradient(90deg, #0d70ea 0%, #0dccea 100%);
+    }
+
+    .mobileOnly {
+        display: block !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .pList {
+        padding: 0 12px;
+        gap: 12px;
+    }
+    .pList .pListItem {
+        margin: 0 4px;
+        min-width: 300px;
+        max-height: 140px !important;
+        min-height: 140px !important;
+    }
+    .pList .pListTitles {
+        padding: 12px 15px;
+    }
+    .pList .pListTitles h2 {
+        font-size: 1.3rem;
+    }
+    .pList .pListTitles h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .pList {
+        padding: 0 15px;
+        gap: 10px;
+    }
+    .pList .pListItem {
+        margin: 0 5px;
+        min-width: 280px;
+        max-height: 130px !important;
+        min-height: 130px !important;
+    }
+    .pList .pListTitles {
+        padding: 10px 12px;
+    }
+}
+
+/* iPad Air */
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+    .pList {
+        padding: 0 24px;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .pList .pListItem {
+        flex: 0 0 calc(50% - 12px);
+        min-width: 320px;
+        max-width: 340px;
+        height: 200px;
+    }
+
+    .pList .pListTitles {
+        padding: 16px 18px;
+    }
+}
+
+/* iPad Mini */
+@media screen and (min-width: 768px) and (max-width: 820px) {
+        .pList {
+        padding: 0 24px !important;
+        gap: 20px !important;
+        justify-content: center !important;
+    }
+
+    .pList .pListItem {
+        flex: 0 0 calc(50% - 12px) !important;
+        min-width: 320px !important;
+        max-width: 340px !important;
+        height: 200px !important;
+    }
+
+    .pList .pListTitles {
+        padding: 16px 18px !important;
+    }
+}
+
+/* iPad Mini: 3 columns per row for property list */
+@media screen and (min-width: 768px) and (max-width: 820px) {
+  .pList {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 24px !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+  }
+  .pList .pListItem {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: 200px !important;
+    margin-bottom: 0 !important;
+    flex: unset !important;
+    grid-column: auto !important;
+    display: flex !important;
+  }
+  .pListShowMoreBtn {
+    display: none !important;
+  }
+}
+
+/* iPad Air/Mini Landscape */
+@media screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) {
+    .pList {
+        padding: 0 24px;
+        gap: 20px;
+    }
+
+    .pList .pListItem {
+        flex: 0 0 calc(33.333% - 16px);
+        min-width: 300px;
+        max-width: 320px;
+        height: 220px;
+    }
+}
+
+/* Update property list grid for wider screens */
+@media screen and (min-width: 820px) {
+  .pList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 24px;
+  }
+  .pList .pListItem {
+    flex: 0 0 calc(33.333% - 18px);
+    max-width: calc(33.333% - 18px);
+    min-width: 0;
+    height: 200px;
+    margin-bottom: 0;
+  }
+}
+
+/* Hide any rogue h2/h3 elements outside of .pListTitles */
+.pList .pListItem > h2, .pList .pListItem > h3 {
+    display: none;
+}

@@ -1,0 +1,124 @@
+.featured {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.featuredItem {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 220px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0;
+}
+
+.featuredImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.featuredItem:hover .featuredImage {
+    transform: scale(1.04);
+    transition: transform 0.3s;
+}
+
+.featuredTitles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 20px 16px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.05) 100%);
+    color: #fff;
+    z-index: 2;
+    border-radius: 0 0 16px 16px;
+    text-align: left;
+}
+
+.featuredTitles h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.featuredTitles h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.95;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+    .featured {
+        flex-direction: column;
+        padding: 0 10px;
+        gap: 15px;
+    }
+    .featuredItem {
+        height: 150px;
+        border-radius: 12px;
+    }
+    .featuredTitles {
+        padding: 12px 12px 10px 12px;
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .featured {
+        padding: 0 12px;
+        gap: 12px;
+    }
+    .featuredItem {
+        margin: 0 4px;
+        height: 140px;
+    }
+    .featuredTitles {
+        padding: 12px 15px;
+    }
+    .featuredTitles h2 {
+        font-size: 1.3rem;
+    }
+    .featuredTitles h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .featured {
+        padding: 0 15px;
+        gap: 10px;
+    }
+    .featuredItem {
+        margin: 0 5px;
+        height: 130px;
+    }
+    .featuredTitles {
+        padding: 10px 12px;
+    }
+}
+
+/* Remove outside h2/h3 styling, text is inside overlay */
+.featuredItem>h2, .featuredItem>h3 {
+    display: none;
+}

@@ -1,0 +1,110 @@
+/* CityProperties page custom styles */
+.city-properties-container {
+  background: #f8fafd;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.city-properties-content {
+  width: 1024px;
+  max-width: 100vw;
+  margin: 0 auto;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2rem 0 3rem 0;
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.city-properties-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0071c2;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.city-properties-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.city-property-card {
+  background: #f4f8fb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  min-width: 270px;
+  max-width: 320px;
+  flex: 1 1 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.city-property-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,113,194,0.12);
+}
+.city-property-card h3 {
+  color: #222;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.city-property-card p {
+  color: #444;
+  margin: 0.2rem 0;
+  font-size: 1rem;
+}
+.city-property-card .city-property-price {
+  color: #0071c2;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+.city-properties-sidebar {
+  background: #0a47c5;
+  border-radius: 14px;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  min-width: 340px;
+  max-width: 370px;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.city-properties-sidebar h2,
+.city-properties-sidebar .searchbox-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.city-properties-results {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 1100px) {
+  .city-properties-content {
+    width: 100%;
+    max-width: 100vw;
+    padding: 1rem 0 2rem 0;
+  }
+}
+@media (max-width: 900px) {
+  .city-properties-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0;
+  }
+  .city-properties-sidebar {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}

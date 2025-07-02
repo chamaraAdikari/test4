@@ -1,0 +1,247 @@
+.categoryContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.categoryContainer h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.categoryContainer p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.categoryResultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.categoryCard {
+  background: #fff;
+  border-radius: 0;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 340px;
+  height: 420px;
+  min-width: 340px;
+  min-height: 420px;
+  max-width: 340px;
+  max-height: 420px;
+  margin: 0 auto;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.categoryCard:hover {
+  box-shadow: 0 4px 16px rgba(13, 65, 234, 0.08);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.categoryCardImg {
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: 250px;
+  object-fit: cover;
+  background: #f3f6fa;
+  border-bottom: 1px solid #f0f0f0;
+  display: block;
+}
+
+.categoryCardContent {
+  padding: 20px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.categoryCardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a2340;
+  margin-bottom: 4px;
+}
+
+.categoryCardDesc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 40px;
+  max-height: 44px;
+  font-size: 15px;
+  color: #4a5568;
+  margin-bottom: 8px;
+  flex: 0 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.categoryCardDesc[title] {
+  text-decoration: underline dotted #0d70ea 1px;
+}
+
+.categoryCardReadMore {
+  background: none;
+  border: none;
+  color: #0d70ea;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s;
+  display: inline;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, transparent 0%, #fff 60%);
+}
+
+.categoryCardReadMore:hover {
+  color: #0dccea;
+  text-decoration: underline;
+}
+
+.categoryCardCity {
+  font-size: 13px;
+  color: #7b8794;
+  margin-bottom: 8px;
+}
+
+.categoryCardContact {
+  background: linear-gradient(90deg, #0d70ea 60%, #0dccea 100%);
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(13, 65, 234, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  width: 100%;
+  position: static;
+  margin-top: 12px;
+}
+
+.descModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descModal {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 420px;
+  width: 90vw;
+  max-height: 70vh;
+  padding: 32px 24px 24px 24px;
+  box-shadow: 0 8px 32px rgba(13, 65, 234, 0.18);
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.descModalClose {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #0d70ea;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.descModalContent {
+  font-size: 16px;
+  color: #222;
+  white-space: pre-line;
+  margin-top: 8px;
+  overflow-y: auto;
+}
+
+@media (max-width: 1100px) {
+  .categoryResultsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .categoryResultsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .categoryCard {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 380px;
+    min-height: 380px;
+    max-height: 380px;
+  }
+
+  .categoryCardImg {
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categoryContainer {
+    padding: 16px 6px;
+  }
+
+  .categoryCardImg {
+    height: 180px;
+    aspect-ratio: 1/1;
+  }
+
+  .categoryCard {
+    min-height: 340px;
+    max-width: 100%;
+  }
+
+  .categoryCardTitle {
+    font-size: 17px;
+  }
+
+  .categoryCardDesc {
+    font-size: 13px;
+  }
+
+  .categoryCardContact {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}

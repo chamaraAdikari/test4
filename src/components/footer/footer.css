@@ -1,0 +1,175 @@
+.footer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 50px 20px 20px;
+}
+
+.fLists {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.fList {
+    flex: 1;
+    min-width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fSection {
+    margin-bottom: 30px;
+}
+
+.fSection:last-child {
+    margin-bottom: 0;
+}
+
+.fSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.listItem {
+    margin-bottom: 10px;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.listItem:hover {
+    color: #0d70ea;
+}
+
+.fText {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.footerLink {
+    color: #0d70ea;
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+}
+
+.fList a {
+    color: #666;
+    font-size: 14px;
+    text-decoration: none !important;
+    transition: color 0.2s;
+}
+
+.fList a:hover {
+    color: #0d70ea;
+    text-decoration: underline !important;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding: 40px 24px 20px;
+    }
+
+    .fLists {
+        gap: 30px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 30px 20px 20px;
+    }
+
+    .fLists {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .fList {
+        text-align: center;
+    }
+
+    .fSection {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .fSection:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .fTitle {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .listItem {
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+
+    .fText {
+        font-size: 12px;
+        padding-top: 15px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 25px 15px 15px;
+    }
+
+    .fLists {
+        gap: 20px;
+    }
+
+    .fList {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+    }
+}
+
+/* iPad Air Styles */
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+    .footer {
+        padding: 40px 24px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .fLists {
+        justify-content: center;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .fList {
+        text-align: center;
+    }
+}
+
