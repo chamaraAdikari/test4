@@ -4,7 +4,7 @@ import { useCurrency } from "../../context/CurrencyContext";
 import "./list.css";
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import Header from '../../components/header/Header';
-import SearchItem from "../../components/searchItem/Searchitem.jsx";
+import SearchItem from "../../components/searchItem/SearchItem.jsx";
 import FilterButton from "../../components/filterButton/FilterButton.jsx";
 import useFetch from "../../hooks/useFetch";
 import MailList from "../../components/mailList/MailList";
